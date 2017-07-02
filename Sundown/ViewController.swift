@@ -13,7 +13,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var dropDown: UIPickerView!
     
-    var list = ["1","2","3"]
+    var list = ["0","15","30", "45","60"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
