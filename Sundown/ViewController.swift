@@ -17,6 +17,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.dropDown.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -32,7 +33,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        
         return list.count
         
     }
@@ -52,13 +52,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        if textField == self.textBox {
-            self.dropDown.isHidden = false
-            //if you dont want the users to se the keyboard type:
-            
-            textField.endEditing(true)
-        }
+        self.dropDown.isHidden = false
+        textField.endEditing(true)
+//        if textField == self.textBox {
+//            self.dropDown.isHidden = false
+//            //if you dont want the users to se the keyboard type:
+//            
+//            textField.endEditing(true)
+//        }
         
     }
 }
